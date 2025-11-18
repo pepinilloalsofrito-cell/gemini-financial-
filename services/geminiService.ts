@@ -7,7 +7,7 @@ if (!API_KEY) {
   console.warn("API_KEY is not set. AI features will not work.");
 }
 
-const ai = new GoogleGenAI({ apiKey: API_KEY! });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
 let chat: Chat | null = null;
 
 export async function initializeChat(): Promise<void> {
